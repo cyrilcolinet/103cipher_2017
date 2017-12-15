@@ -27,7 +27,7 @@ typedef struct params {
 void 		cipher(param_t *param);
 int 		cipher_main(int ac, char **av);
 
-void 		ecryption(param_t *param);
+void 		encryption(param_t *param);
 
 void 		one_sized_encryption(param_t *param);
 void 		one_sized_decryption(param_t *param);

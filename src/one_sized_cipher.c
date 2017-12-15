@@ -31,8 +31,7 @@ void one_sized_encryption(param_t *param)
 void one_sized_decryption(param_t *param)
 {
 	int msg_len = my_strlen(param->msg);
-	int c = 0, a = 0, m = 0, i = 0;
-	double tmp = 0;
+	int a = 0, m = 0, i = 0;
 	double key = param->key[0];
 
 	printf("Key matrix :\n%.0f\n\n", key);
