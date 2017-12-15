@@ -14,6 +14,7 @@ void cipher(param_t *param)
 	if (param->type == encrypt) {
 		if (param->key_len > 1) {
 			set_matrix_key(param);
+			encryption(param);
 		} else {
 			one_sized_encryption(param);
 		}

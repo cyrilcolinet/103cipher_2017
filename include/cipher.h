@@ -17,7 +17,7 @@ typedef enum type {
 } type_e;
 
 typedef struct params {
-	int 	*key_matrix;
+	double 	*key_matrix;
 	int 	key_len;
 	type_e 	type;
 	char 	*msg;
@@ -26,6 +26,8 @@ typedef struct params {
 
 void 		cipher(param_t *param);
 int 		cipher_main(int ac, char **av);
+
+void 		ecryption(param_t *param);
 
 void 		one_sized_encryption(param_t *param);
 void 		one_sized_decryption(param_t *param);

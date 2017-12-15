@@ -59,7 +59,7 @@ void set_matrix_key(param_t *param)
 	else if (param->key_len > 9 && param->key_len <= 16) 
 		matrix_offset = 16;
 
-	param->key_matrix = my_malloc(sizeof(int) * matrix_offset);
+	param->key_matrix = my_malloc(sizeof(double) * matrix_offset);
 
 	if (matrix_offset == 16)
 		matrix_offset = 12;
