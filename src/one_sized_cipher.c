@@ -14,7 +14,7 @@ void one_sized_encryption(param_t *param)
 	double tmp = 0;
 	double key = param->key[0];
 
-	printf("Key :\n%.0f\n\n", key);
+	printf("Key matrix :\n%.0f\n\n", key);
 	printf("Encrypted message :\n");
 
 	for (int i = 0; i < msg_len; i++) {
@@ -23,6 +23,31 @@ void one_sized_encryption(param_t *param)
 
 		if (i < msg_len - 1)
 			printf(" ");
+	}
+
+	printf("\n");
+}
+
+void one_sized_decryption(param_t *param)
+{
+	int msg_len = my_strlen(param->msg);
+	int c = 0, a = 0, m = 0, i = 0;
+	double tmp = 0;
+	double key = param->key[0];
+
+	printf("Key matrix :\n%.0f\n\n", key);
+	printf("Decrypted message :\n");
+
+	while (i < msg_len) {
+		while (param->msg[i] != ' ' && param->msg[i] != 0) {
+			a = a * 10 + (param->msg[i] - 48);
+			i++;
+		}
+
+		m = a / key;
+		printf("%c", m);
+		i++;
+		a = 0;
 	}
 
 	printf("\n");

@@ -21,7 +21,7 @@ void cipher(param_t *param)
 		if (param->key_len > 1) {
 			param->key_matrix = get_matrix_key(param->key);
 		} else {
-
+			one_sized_decryption(param);
 		}
 	} else {
 		my_puterr("Unknown type. Only 'encrypt' and 'decrypt' allowed.\n");
