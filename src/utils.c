@@ -48,7 +48,25 @@ param_t *init_struct(char **av)
 	return (param);
 }
 
-int *get_matrix_key(char *key)
+void set_matrix_key(param_t *param)
 {
-	return (NULL);
+	int matrix_offset = 0;
+
+	if (param->key_len > 1 && param->key_len <= 4) 
+		matrix_offset = 4;
+	else if (param->key_len > 4 && param->key_len <= 9) 
+		matrix_offset = 9;
+	else if (param->key_len > 9 && param->key_len <= 16) 
+		matrix_offset = 16;
+
+	param->key_matrix = my_malloc(sizeof(int) * matrix_offset);
+
+	if (matrix_offset == 16)
+		matrix_offset = 12;
+
+	for (int i = 0; i < param->key_len; i++)
+			param->key_matrix[i] = param->key[i];
+
+	for (; param->key_len < matrix_offset; param->key_len++)
+		param->key_matrix[param->key_len] = 0;
 }

@@ -13,13 +13,13 @@ void cipher(param_t *param)
 {
 	if (param->type == encrypt) {
 		if (param->key_len > 1) {
-			param->key_matrix = get_matrix_key(param->key);
+			set_matrix_key(param);
 		} else {
 			one_sized_encryption(param);
 		}
 	} else if (param->type == decrypt) {
 		if (param->key_len > 1) {
-			param->key_matrix = get_matrix_key(param->key);
+			set_matrix_key(param);
 		} else {
 			one_sized_decryption(param);
 		}
