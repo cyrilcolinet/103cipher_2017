@@ -11,9 +11,10 @@ NAME 			= 103cipher
 
 SRC 			= src/cipher.c  			\
 				  src/main.c 				\
-				  src/utils.c
+				  src/utils.c 				\
+				  src/one_sized_cipher.c 	
 
-CFLAGS 			= -Wall -Wextra -Werror -I./include -g3
+CFLAGS 			= -Wall -Wextra -I./include -g3
 
 EXTRA_FLAGS 	= -L./lib/ -lmy -g3
 

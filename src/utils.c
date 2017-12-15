@@ -40,6 +40,15 @@ param_t *init_struct(char **av)
 	param_t *param = my_malloc(sizeof(*param));
 
 	param->key_len = my_strlen(av[2]);
+	param->type = ((my_atoi(av[3]) == 0 ? encrypt : decrypt));
+	param->key_matrix = NULL;
+	param->msg = av[1];
+	param->key = av[2];
 
 	return (param);
+}
+
+int *get_matrix_key(char *key)
+{
+	return (NULL);
 }
