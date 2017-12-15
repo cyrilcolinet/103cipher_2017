@@ -8,6 +8,6 @@
 # ifndef UTILS_H
 # define UTILS_H
 
-int 		check_arguments(int ac, char **av);
+void 		check_arguments(int ac, char **av);
 
 # endif
