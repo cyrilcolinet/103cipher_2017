@@ -28,9 +28,18 @@ void check_arguments(int ac, char **av)
 		if (!av[1][0] || !av[2][0]) {
 			my_puterr("Message or Key must be not empty.\n");
 			exit(84);
-		} else if(!my_str_isnum(av[3]) || num != 0 || num != 1) {
+		} else if(my_strlen(av[3]) != 1 || (num != 0 && num != 1)) {
 			my_puterr("Flag must be equals to 0 or 1.\n");
 			exit(84);
 		}
 	}
+}
+
+param_t *init_struct(char **av)
+{
+	param_t *param = my_malloc(sizeof(*param));
+
+	param->key_len = my_strlen(av[2]);
+
+	return (param);
 }

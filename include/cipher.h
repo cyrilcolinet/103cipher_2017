@@ -12,6 +12,10 @@
 # ifndef CIPHER_H
 # define CIPHER_H
 
+typedef struct params {
+	int 	key_len;	
+} param_t;
+
 int 		cipher_main(int ac, char **av);
 
 # endif

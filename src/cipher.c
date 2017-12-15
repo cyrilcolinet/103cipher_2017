@@ -10,7 +10,12 @@
 
 int cipher_main(int ac, char **av)
 {
+	param_t *param;
+
 	check_arguments(ac, av);
-	
+	param = init_struct(av);
+
+	free(param);
+
 	return (0);
 }
