@@ -9,7 +9,7 @@
 
 NAME 			= 103cipher
 
-SRC 			= src/sokoban.c 			\
+SRC 			= src/cipher.c  			\
 				  src/main.c 				\
 				  src/utils.c
 
