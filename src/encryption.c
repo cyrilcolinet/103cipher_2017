@@ -53,7 +53,7 @@ void encrypt_three_by_three_matrix(param_t *param)
 
 		printf("%d %d %d", fir, sec, thr);
 
-		if (k < msg_len)
+		if (k < msg_len - 3)
 			printf(" ");
 	}
 
@@ -85,19 +85,19 @@ void encryption(param_t *param)
 
 	if (param->key_len <= 4) {
 		for (int i = 0; i < 4; i += 2)
-			printf("%.2f\t%.2f\n", key[i], key[i + 1]);
+			printf("%.0f\t%.0f\n", key[i], key[i + 1]);
 
 		printf("\nEncrypted message :\n");
 		encrypt_two_by_two_matrix(param);
 	} else if (param->key_len > 4 && param->key_len <= 9) {
 		for (int i = 0; i < 9; i += 3)
-			printf("%.2f\t%.2f\t%.2f\n", key[i], key[i + 1], key[i + 2]);
+			printf("%.0f\t%.0f\t%.0f\n", key[i], key[i + 1], key[i + 2]);
 
 		printf("\nEncrypted message :\n");
 		encrypt_three_by_three_matrix(param);
 	} else if (param->key_len > 9 && param->key_len <= 16) {
 		for (int i = 0; i < 16; i += 4)
-			printf("%.2f\t%.2f\t%.2f\t%.2f\n", key[i], key[i + 1], key[i + 2], key[i + 3]);
+			printf("%.0f\t%.0f\t%.0f\t%.0f\n", key[i], key[i + 1], key[i + 2], key[i + 3]);
 		
 		printf("\nEncrypted message :\n");
 		encrypt_four_by_four_matrix(param);
