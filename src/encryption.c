@@ -21,7 +21,7 @@ void encrypt_two_by_two_matrix(param_t *param)
 
 		printf("%d %d", fir, sec);
 
-		if (j < msg_len)
+		if (j < msg_len - 2)
 			printf(" ");
 	}
 
@@ -29,7 +29,7 @@ void encrypt_two_by_two_matrix(param_t *param)
 		fir = param->msg[i] * param->key_matrix[0];
 		sec = param->msg[j] * param->key_matrix[1];
 
-		printf(" %d %d", fir, sec);
+		printf(" %d %da", fir, sec);
 	}
 
 	printf("\n");
