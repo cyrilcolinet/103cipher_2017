@@ -13,7 +13,7 @@ void encrypt_two_by_two_matrix(param_t *param)
 	int msg_len = my_strlen(param->msg);
 	int i = 0, j = 0, fir = 0, sec = 0;
 
-	for (i = 0, j = 0; i < msg_len; i += 2, j += 2) {
+	for (i = 0, j = 1; i < msg_len; i += 2, j += 2) {
 		fir = param->msg[i] * param->key_matrix[0];
 		fir += param->msg[j] * param->key_matrix[2];
 		sec = param->msg[i] * param->key_matrix[1];
@@ -29,7 +29,7 @@ void encrypt_two_by_two_matrix(param_t *param)
 		fir = param->msg[i] * param->key_matrix[0];
 		sec = param->msg[j] * param->key_matrix[1];
 
-		printf(" %d %da", fir, sec);
+		printf(" %d %d", fir, sec);
 	}
 
 	printf("\n");
@@ -40,7 +40,7 @@ void encrypt_three_by_three_matrix(param_t *param)
 	int msg_len = my_strlen(param->msg);
 	int i = 0, j = 0, k = 0, fir = 0, sec = 0, thr = 0;
 
-	for (i = 0, j = 0, k = 0; i < msg_len; i += 3, j += 3, k += 3) {
+	for (i = 0, j = 1, k = 2; i < msg_len; i += 3, j += 3, k += 3) {
 		fir = param->msg[i] * param->key_matrix[0];
 		fir += param->msg[j] * param->key_matrix[3];
 		fir += param->msg[k] * param->key_matrix[6];
@@ -53,7 +53,7 @@ void encrypt_three_by_three_matrix(param_t *param)
 
 		printf("%d %d %d", fir, sec, thr);
 
-		if (k < msg_len - 3)
+		if (k < msg_len - 2)
 			printf(" ");
 	}
 
