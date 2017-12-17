@@ -13,7 +13,8 @@ SRC 			= src/cipher.c  			\
 				  src/main.c 				\
 				  src/utils.c 				\
 				  src/one_sized_cipher.c 	\
-				  src/encryption.c
+				  src/encryption.c 			\
+				  src/decryption.c
 
 CFLAGS 			= -Wall -Wextra -I./include -g3
 

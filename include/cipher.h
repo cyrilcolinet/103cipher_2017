@@ -28,6 +28,7 @@ void 		cipher(param_t *param);
 int 		cipher_main(int ac, char **av);
 
 void 		encryption(param_t *param);
+void 		decryption(param_t *param);
 
 void 		one_sized_encryption(param_t *param);
 void 		one_sized_decryption(param_t *param);
