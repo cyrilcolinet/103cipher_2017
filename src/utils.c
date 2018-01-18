@@ -26,7 +26,7 @@ void check_arguments(int ac, char **av)
 		int num = my_atoi(av[3]);
 
 		if (!av[1][0] || !av[2][0]) {
-			my_puterr("Message or Key must be not empty.\n"), false;
+			my_puterr("Message or Key must be not empty.\n", false);
 			exit(84);
 		} else if(my_strlen(av[3]) != 1 || (num != 0 && num != 1)) {
 			my_puterr("Flag must be equals to 0 or 1.\n", false);
