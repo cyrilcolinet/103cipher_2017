@@ -26,7 +26,7 @@ void cipher(param_t *param)
 			one_sized_decryption(param);
 		}
 	} else {
-		my_puterr("Unknown type. Only 'encrypt' and 'decrypt' allowed.\n" false);
+		my_puterr("Unknown type. Only 'encrypt' and 'decrypt' allowed.\n", false);
 		exit(84);
 	}
 }
