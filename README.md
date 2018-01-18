@@ -74,6 +74,27 @@ Using the ASCII table, the clear message becomes :
 ```
 
 <img align="right" src="/doc/HomerS-5x3-matrix1.gif" alt="" />
-<br />
+<br /><br />
 
 Written as a 3-column-matrix :
+
+<img align="right" src="/doc/HomerS-5x3-matrix2.gif" alt="" />
+<br /><br />
+
+The product of these matrices is this, which gives the encrypted message.
+
+```
+∼
+/B-MAT-100> ./103cipher "26690 21552 11810 19718 16524 13668 25322 22497 14177 28422 26097 16433 12333 11874 5824 27541 23754 14452 17180 17553 7963 26387 22047 13895 18804 14859 12033 27738 23835 15331 21487 16656 13238 21696 15978 6976 20750 23307 14093 16788 11751 8981 22339 24861 15619 21295 16524 13668 26403 23610 15190 29451 25764 16106 26394 23307 14093 3312 5106 5014" "Homer S" 1
+Key matrix :
+0.0        0.0        0.012
+-0.004     0.012      -0.012
+0.013      -0.013     0.004
+
+Decrypted message :
+Just because I don't care doesn't mean I don't understand.
+```
+
+> :bulb: Elements of the key matrix are separated by tabulations in the final output 
+
+> :bulb: For decryption, key matrix is given as an indication, but will not be tested ; do not bother having the exact same outuput !
