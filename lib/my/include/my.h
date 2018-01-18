@@ -5,8 +5,14 @@
 ** My personnal library header
 */
 
-#ifndef MY_H_
-#define MY_H_
+# ifndef MY_H_
+# define MY_H_
+
+# ifndef READ_SIZE
+# define READ_SIZE (128)
+# endif
+
+# include <stdbool.h>
 
 /**
 ** Check if number is negative or  positive
@@ -261,9 +267,10 @@ void my_sort_int_array(int *array, int size);
 /**
 ** Print error (on the stderr output)
 ** @param (char) *str
+** @param (bool) close
 ** @return (void)
 **/
-void my_puterr(char *str);
+void my_puterr(char *str, bool close);
 
 /**
 ** Malloc own (exit wen malloc failed)
@@ -302,4 +309,27 @@ char **my_strtok(char *str, char *delimiter);
 **/
 void my_putnbr_base(int nbr, char *base);
 
-#endif
+/**
+** Realloc char pointer
+** @param (char *) ptr
+** @param (unsigned int) size
+** @return (char *) new_ptr
+**/
+char *my_realloc(char *ptr, unsigned int size);
+
+/**
+** Get the next line of file description
+** @param (int) fdesc
+** @return (char *) line
+**/
+char *my_getline(int fdesc);
+
+/**
+** Printf function recoded
+** @param (char *) format
+** @param (...) va_list <stdarg.h>
+** @return (void)
+**/
+void my_printf(char *format, ...);
+
+# endif
