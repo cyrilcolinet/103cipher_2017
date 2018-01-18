@@ -42,7 +42,7 @@ The decryption process logically follows from the previous encryption method, us
 
 ## Bonus
 
-- ryptanalysis of the code, to find the original message without the key
+- cryptanalysis of the code, to find the original message without the key
 - refining the encryption process
 
 ## Examples
@@ -63,8 +63,5 @@ Encrypted message :
 ```
 
 Indeed, "Homer S", transcripted into numbers using the ASCII table, gives the following 3-3-matrix :
-$\begin{pmatrix}
-72 & 111 & 109\\ 
-101 & 114 & 32\\ 
-83 & 0 & 0
-\end{pmatrix}$
+
+<div align="center"><img src="/doc/HomerS-3x3-matrix.gif" alt="" /></div>
