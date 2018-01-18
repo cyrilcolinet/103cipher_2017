@@ -20,7 +20,7 @@ void reverse_two_by_two(param_t *param)
 	double reverted[4];
 
 	if (rev == 0) {
-		my_puterr("Unable to reverse matrix. Abord.\n");
+		my_puterr("Unable to reverse matrix. Abord.\n", false);
 		exit(84);
 	}
 
