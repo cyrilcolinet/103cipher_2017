@@ -1,4 +1,4 @@
-# Cipher - Message masking with matrices
+# Cipher - Message masking with matrices [![Build Status](https://travis-ci.org/mrlizzard/103cipher_2017.svg?branch=master)](https://travis-ci.org/mrlizzard/103cipher_2017)
 
 - **Binary name:** 103cipher
 - **Repository name:** 103cipher_2017
