@@ -75,8 +75,10 @@ void encrypt_four_by_four_matrix(param_t *param)
 
 void encryption(param_t *param)
 {
+	int i;
+
 	if (param->key_len > 16) {
-		my_puterr("Key too long. Aborded.\n");
+		my_puterr("Key too long. Aborded.\n", false);
 		exit(84);
 	}
 
@@ -84,19 +86,19 @@ void encryption(param_t *param)
 	printf("Key matrix :\n");
 
 	if (param->key_len <= 4) {
-		for (int i = 0; i < 4; i += 2)
+		for (i = 0; i < 4; i += 2)
 			printf("%.0f\t%.0f\n", key[i], key[i + 1]);
 
 		printf("\nEncrypted message :\n");
 		encrypt_two_by_two_matrix(param);
 	} else if (param->key_len > 4 && param->key_len <= 9) {
-		for (int i = 0; i < 9; i += 3)
+		for (i = 0; i < 9; i += 3)
 			printf("%.0f\t%.0f\t%.0f\n", key[i], key[i + 1], key[i + 2]);
 
 		printf("\nEncrypted message :\n");
 		encrypt_three_by_three_matrix(param);
 	} else if (param->key_len > 9 && param->key_len <= 16) {
-		for (int i = 0; i < 16; i += 4)
+		for (i = 0; i < 16; i += 4)
 			printf("%.0f\t%.0f\t%.0f\t%.0f\n", key[i], key[i + 1], key[i + 2], key[i + 3]);
 		
 		printf("\nEncrypted message :\n");

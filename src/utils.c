@@ -20,16 +20,16 @@ void check_arguments(int ac, char **av)
 		my_putstr("\tflag\tFlag: 1 to decrypt and 0 to encrypt\n");
 		exit(0);
 	} else if (ac != 4) {
-		my_puterr("Usage: ./103cipher <msg> <key> <flag>\n");
+		my_puterr("Usage: ./103cipher <msg> <key> <flag>\n", false);
 		exit(84);
 	} else {
 		int num = my_atoi(av[3]);
 
 		if (!av[1][0] || !av[2][0]) {
-			my_puterr("Message or Key must be not empty.\n");
+			my_puterr("Message or Key must be not empty.\n"), false;
 			exit(84);
 		} else if(my_strlen(av[3]) != 1 || (num != 0 && num != 1)) {
-			my_puterr("Flag must be equals to 0 or 1.\n");
+			my_puterr("Flag must be equals to 0 or 1.\n", false);
 			exit(84);
 		}
 	}
@@ -51,6 +51,7 @@ param_t *init_struct(char **av)
 void set_matrix_key(param_t *param)
 {
 	int matrix_offset = 0;
+	int i;
 
 	if (param->key_len > 1 && param->key_len <= 4) 
 		matrix_offset = 4;
@@ -64,7 +65,7 @@ void set_matrix_key(param_t *param)
 	if (matrix_offset == 16)
 		matrix_offset = 12;
 
-	for (int i = 0; i < param->key_len; i++)
+	for (i = 0; i < param->key_len; i++)
 			param->key_matrix[i] = param->key[i];
 
 	for (; param->key_len < matrix_offset; param->key_len++)

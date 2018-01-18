@@ -11,13 +11,14 @@
 void one_sized_encryption(param_t *param)
 {
 	int msg_len = my_strlen(param->msg);
+	int i;
 	double tmp = 0;
 	double key = param->key[0];
 
 	printf("Key matrix :\n%.0f\n\n", key);
 	printf("Encrypted message :\n");
 
-	for (int i = 0; i < msg_len; i++) {
+	for (i = 0; i < msg_len; i++) {
 		tmp = param->msg[i] * key;
 		printf("%.0f", tmp);
 
