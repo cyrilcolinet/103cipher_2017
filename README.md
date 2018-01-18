@@ -65,7 +65,7 @@ Encrypted message :
 <img align="right" src="/doc/HomerS-3x3-matrix.gif" alt="" />
 <br />
 
-Indeed, "Homer S", transcripted into numbers using the ASCII table, gives the following 3-3-matrix :
+Indeed, "Homer S", transcripted into numbers using the ASCII table, gives the following 3-3-matrix :<br />
 
 Using the ASCII table, the clear message becomes :
 
@@ -81,7 +81,7 @@ Written as a 3-column-matrix :
 <img align="right" src="/doc/HomerS-5x3-matrix2.gif" alt="" />
 <br /><br />
 
-The product of these matrices is this, which gives the encrypted message. <br /><br />
+The product of these matrices is this, which gives the encrypted message. <br /><br /><br />
 
 
 ```
