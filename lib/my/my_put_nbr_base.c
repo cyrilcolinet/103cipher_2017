@@ -24,6 +24,6 @@ void my_put_nbr_base(int nbr, char *base)
 		my_putchar(base[mod]);
 		return;
 	}
-	my_putnbr_base(nbr / size, base);
+	my_put_nbr_base(nbr / size, base);
 	my_putchar(base[mod]);
 }
