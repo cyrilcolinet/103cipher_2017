@@ -1,4 +1,4 @@
-# Architect - Message masking with matrices
+# Cipher - Message masking with matrices
 
 - **Binary name:** 103cipher
 - **Repository name:** 103cipher_2017
@@ -26,7 +26,7 @@ You have to carry out such a matrix-based ciphering software, using the followin
 
 The decryption process logically follows from the previous encryption method, using the same key (be careful ! you need to inverse the key matrix, which is not always possible).
 
-> :warning: 2-dimension and 3-dimension matrices invertions are rather easy, but inverting bigger matrices is a difficult problem ; it would be considered as a bonus point if you can do that !
+> :exclamation: 2-dimension and 3-dimension matrices invertions are rather easy, but inverting bigger matrices is a difficult problem ; it would be considered as a bonus point if you can do that !
 
 ## Usage
 
@@ -63,8 +63,10 @@ Encrypted message :
 ```
 
 Indeed, "Homer S", transcripted into numbers using the ASCII table, gives the following 3-3-matrix :
+$$
 \begin{pmatrix}
 72 & 111 & 109\\ 
 101 & 114 & 32\\ 
 83 & 0 & 0
 \end{pmatrix}
+$$
