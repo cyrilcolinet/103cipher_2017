@@ -68,7 +68,10 @@ Encrypted message :
 Indeed, "Homer S", transcripted into numbers using the ASCII table, gives the following 3-3-matrix :
 
 Using the ASCII table, the clear message becomes :
-```74 117 115 116 32 98 101 99 97 117 115 101 32 73 32 100 111 110 39 116 32 99 97 114 101 32 100 111 101 115 110 39 116 32 109 101 97 110 32 73 32 100 111 110 39 116 32 117 110 100 101 114 115 116 97 110 100 46```
+
+```
+74 117 115 116 32 98 101 99 97 117 115 101 32 73 32 100 111 110 39 116 32 99 97 114 101 32 100 111 101 115 110 39 116 32 109 101 97 110 32 73 32 100 111 110 39 116 32 117 110 100 101 114 115 116 97 110 100 46
+```
 
 <div align="center">
 	<img align="right" src="/doc/HomerS-5x3-matrix1.gif" alt="" />
