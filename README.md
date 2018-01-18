@@ -62,4 +62,5 @@ Encrypted message :
 14093 3312 5106 5014
 ```
 
+
 Indeed, "Homer S", transcripted into numbers using the ASCII table, gives the following 3-3-matrix : <img src="/doc/HomerS-3x3-matrix.gif" alt="" />
