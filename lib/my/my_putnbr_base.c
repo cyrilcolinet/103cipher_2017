@@ -7,7 +7,7 @@
 
 # include "my.h"
 
-void my_putnbr_base(int nbr, char *base)
+void my_put_nbr_base(int nbr, char *base)
 {
 	int size = 0;
 	int mod = 0;
