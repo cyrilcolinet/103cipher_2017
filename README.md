@@ -81,7 +81,7 @@ Written as a 3-column-matrix :
 <img align="right" src="/doc/HomerS-5x3-matrix2.gif" alt="" />
 <br /><br />
 
-The product of these matrices is this, which gives the encrypted message.
+The product of these matrices is this, which gives the encrypted message. <br /><br />
 
 
 ```
