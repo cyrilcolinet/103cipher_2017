@@ -16,7 +16,7 @@ SRC 			= src/cipher.c  			\
 				  src/encryption.c 			\
 				  src/decryption.c
 
-CFLAGS 			= -Wall -Wextra -I./include -g3
+CFLAGS 			= -Wall -Wextra -I./include -g3 --coverage
 
 EXTRA_FLAGS 	= -L./lib/ -lmy -g3
 
