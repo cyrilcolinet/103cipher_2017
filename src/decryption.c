@@ -10,7 +10,7 @@
 
 void decrypt_two_by_two(param_t *param, double rev[4])
 {
-
+	(void)param, (void)rev;
 }
 
 void reverse_two_by_two(param_t *param)
